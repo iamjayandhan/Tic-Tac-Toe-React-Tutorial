@@ -19,18 +19,33 @@ export default function Board() {
         const nextSquares = squares.slice();
         if (xIsNext) {
             nextSquares[i] = "X";
-          } else {
+          } 
+        else {
             nextSquares[i] = "O";
           }
         setSquares(nextSquares);
         setXIsNext(!xIsNext);
     }
 
+    function resetGame() {
+      setSquares(Array(9).fill(null));
+      setXIsNext(true);
+    }
+
+
     const winner = calculateWinner(squares);
+    const isDraw = squares.every(square => square !== null);
+
     let status;
     if (winner) {
         status = "Winner: " + winner;
-    } else {
+        alert("Congratulations player "+winner);
+    } 
+    else if (isDraw) {
+      status = "It's a draw!";
+      alert("Draw! Try using tactics bro..");
+    }
+    else {
         status = "Next player: " + (xIsNext ? "X" : "O");
     }
 
@@ -52,6 +67,7 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
+      <button className="reset-button" onClick={resetGame}>Reset Game</button>
     </>
   );
 }
