@@ -4,7 +4,9 @@ import Board from './Board';
 
 function App() {
   return (
-      <Board/>    
+    <div className='box-overall'>
+      <Board/>
+    </div>    
   );
 }
 

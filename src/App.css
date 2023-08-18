@@ -104,7 +104,7 @@ body {
   width: 80px;
   height: 80px;
   font-size: 24px;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0;    /*#f0f0f0;*/
   border: 1px solid #ccc;
   display: flex;
   justify-content: center;
@@ -113,6 +113,11 @@ body {
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.box-overall{
+  margin-left: 5rem;
+  margin-top: 3rem;
 }
 
 .square:hover {
