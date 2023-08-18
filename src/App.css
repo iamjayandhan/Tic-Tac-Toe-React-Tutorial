@@ -149,3 +149,19 @@ body {
 .square.o.clicked {
   background-color: rgba(33, 150, 243, 0.8);
 }
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+  margin-left: 3.5rem;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+}
